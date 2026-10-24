@@ -25,3 +25,5 @@ For administrators (like presidents of French chapters):
 1. Sign in at /admin with a Firebase email and password.
 2. The app checks whether the account has a document in the admins collection.
 3. Admins create, edit, publish, unpublish, and archive
+
+**An earlier version used a Python (FastAPI) backend with a SQLite database. I switched to Firebase so that sign-in, the database, and hosting all live in one project at francoserve.web.app, with no separate server to run or host. It also keeps opportunities stored permanently in Firestore instead of in a local database file.
