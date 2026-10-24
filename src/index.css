@@ -1,0 +1,17 @@
+@import 'leaflet/dist/leaflet.css';
+@import 'leaflet.markercluster/dist/MarkerCluster.css';
+@import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-ivory text-navy font-sans antialiased}
+:focus-visible{outline:2px solid #00539B;outline-offset:2px}
+.pin{width:18px;height:18px;border-radius:50%;background:#00539B;border:3px solid #fff;box-shadow:0 1px 4px #0006}
+.pin.feat{background:#E1000F}.pin.sel{background:#14233B;transform:scale(1.4)}
+.leaflet-container{font-family:"Schibsted Grotesk",sans-serif}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.leaflet-tile-pane{filter:saturate(.55) contrast(1.03)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero{background:#14233B}
+.tricolor{height:6px;background:linear-gradient(90deg,#00539B 0 33.33%,#fff 33.33% 66.66%,#E1000F 66.66%)}
+h1,h2,h3{font-weight:700}

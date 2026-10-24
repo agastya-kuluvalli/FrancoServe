@@ -1,0 +1,12 @@
+rules_version = '2';
+service cloud.firestore { match /databases/{db}/documents {
+  function isAdmin() { return request.auth != null && exists(/databases/$(db)/documents/admins/$(request.auth.uid)); }
+  match /opportunities/{id} {
+    allow read: if resource.data.status == 'published' || isAdmin();
+    allow write: if isAdmin();
+  }
+  match /admins/{uid} {
+    allow read: if request.auth != null && request.auth.uid == uid;
+    allow write: if false;   // add admins by hand in the Firebase console
+  }
+}}

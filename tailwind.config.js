@@ -1,0 +1,1 @@
+export default {content:['./index.html','./src/**/*.{ts,tsx}'],theme:{extend:{colors:{navy:'#14233B',blue:'#00539B',ivory:'#FAF8F3',slate:'#5B6678',gold:'#C5A46D',rouge:'#E1000F',rougeL:'#FF6B73'},fontFamily:{serif:['"Bodoni Moda"','Georgia','serif'],sans:['"Schibsted Grotesk"','system-ui','sans-serif']}}}}
